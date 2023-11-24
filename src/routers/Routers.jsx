@@ -8,7 +8,10 @@ import WishList from '../pages/WishList'
 import ProductDetails from '../pages/ProductDetails'
 import Checkout from '../pages/Checkout'
 import Login from '../pages/Login'
-import SignUp from '../pages/SignUp'
+import Register from '../pages/Register'
+import Profile from '../pages/Profile'
+import ChangePassword from '../components/ProfileComponents/ChangePassword'
+import EditProfile from '../components/ProfileComponents/EditProfile'
 
 function Routers() {
     return (
@@ -21,7 +24,10 @@ function Routers() {
             <Route path='wishlist' element={<WishList/>}/>
             <Route path='checkout' element={<Checkout/>}/>
             <Route path='login' element={<Login/>}/>
-            <Route path='signup' element={<SignUp/>}/>
+            <Route path='register' element={<Register/>}/>
+            <Route path='profile' element={<Profile/>}/>
+            <Route path='change-password' element={<ChangePassword/>}/>
+            <Route path='edit-profile' element={<EditProfile/>}/>
         </Routes>
     )
 }
