@@ -1,0 +1,45 @@
+.home-section{
+    padding: 130px 3% 500px 3%;
+}
+
+.home-section .home-dashboard{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-section .home-dashboard h1{
+    font-size: 24px;
+}
+
+.home-section .home-dashboard h3{
+    margin-top: 20px;
+}
+
+.home-section .home-dashboard .total-sales{
+    background-color: #dfdfdf;
+    border: 1px solid #ababab;
+    padding: 50px 70px;
+    text-align: center;
+}
+
+.home-section .home-dashboard .total-order{
+    background-color: #dfdfdf;
+    border: 1px solid #ababab;
+    padding: 50px 70px;
+    text-align: center;
+}
+
+.home-section .home-dashboard .total-product{
+    background-color: #dfdfdf;
+    border: 1px solid #ababab;
+    padding: 50px 70px;
+    text-align: center;
+}
+
+.home-section .home-dashboard .total-buyers{
+    background-color: #dfdfdf;
+    border: 1px solid #ababab;
+    padding: 50px 70px;
+    text-align: center;
+}

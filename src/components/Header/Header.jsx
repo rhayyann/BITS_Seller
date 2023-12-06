@@ -8,12 +8,16 @@ const nav_links = [
         display: 'Home'
     },
     {
-        path: 'shop',
-        display: 'Shop'
+        path: 'product',
+        display: 'Product'
     },
     {
-        path: 'wishlist',
-        display: 'Wishlist'
+        path: 'add-product',
+        display: 'Add Product'
+    },
+    {
+        path: 'orders',
+        display: 'Orders'
     }
 ]
 
@@ -44,9 +48,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-icons-link">
-                    {/* <a href="/message"><i class='bx bx-message-minus'></i></a> */}
-                    <a href="/cart"><i class='bx bx-cart' ></i></a>
-                    <a href="/profile"><i class='bx bx-user'></i></a>
+                    <a href="/message"><i class='bx bx-bell'></i></a>
                 </div>
                 {/* <div className="burger-button">
                     <i class='bx bx-menu'></i>

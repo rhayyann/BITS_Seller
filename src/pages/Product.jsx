@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import '../styles/Product.css';
+import { useNavigate } from 'react-router-dom'
 
 const products = [
     { id: 1, name: 'PC Case ATX Size', img: 'case1.png', price: 'RP 920.000', category: 'pc-case'},
@@ -25,5 +27,45 @@ const products = [
     { id: 22, name: 'TEAM T-FORCE NIGHT HAWK RGB 16GB', img: 'ram5.png', price: 'Rp 950.000', category: 'ram'},
 ];
 
-export default products
-  
+function Product() {
+    const navigate = useNavigate();
+  return (
+    <section className="product-section">
+        <div className="product-section-wrapper">
+            <div className="product-section-title">
+                <h1>LIST PRODUCT</h1>
+                <button onClick={()=>navigate("/add-product")}><i className='bx bx-plus-circle'></i>Add Product</button>
+            </div>
+            <div className="product-table">
+                <table className="table">
+                    <thead className='thead'>
+                        <tr>
+                            <th style={{width: '20%'}} className='product-image'>Foto Product</th>
+                            <th style={{width: '40%'}} className='product-name'>Nama Product</th>
+                            <th style={{width: '20%'}} className='product-category'>Kategori</th>
+                            <th style={{width: '30%'}} className='product-price'>Harga</th>
+                            <th style={{width: '30%'}} className='product-button'>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody className='tbody'>
+                        {products.map(product => (
+                        <tr key={product.id}>
+                            <td>{product.img}</td>
+                            <td>{product.name}</td>
+                            <td>{product.category}</td>
+                            <td>{product.price}</td>
+                            <td className='action-button'>
+                                <button onClick={()=>navigate("update-product")}>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+  );
+}
+
+export default Product;
